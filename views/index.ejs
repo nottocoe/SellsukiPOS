@@ -128,7 +128,7 @@
       }
 
       cart.forEach(item => {
-        $('#myList').append('<li id="all-cart-' + item.id + '">' + item.title + '<span id="amount" class="amount"> x<span id="book_amount" class="book_amount">' + item.amount + '</span></span></div><div id="cd-price" class="cd-price">' + item.price + ' <span>Baht</span></div><a class="cd-item-remove cd-img-replace" onclick="removeCart(' + item.id + ')">Remove</a></li>');
+        $('#myList').append('<li id="all-cart-' + item.id + '">' + item.title + '<span id="amount" class="amount"> x<span id="book_amount" class="book_amount">' + item.amount + '</span></span></div><div id="cd-price" class="cd-price">' + item.price * item.amount + ' <span>Baht</span></div><a class="cd-item-remove cd-img-replace" onclick="removeCart(' + item.id + ')">Remove</a></li>');
       });
 
       cart.forEach(item => {
